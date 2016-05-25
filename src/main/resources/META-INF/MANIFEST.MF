@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Premain-Class: delegete.javaagent.AgentDelegete
+Can-Redefine-Classes: true
