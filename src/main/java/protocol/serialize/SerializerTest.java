@@ -1,8 +1,5 @@
 package protocol.serialize;
 
-import protocol.serialize.hessian.HessianSerializer;
-import protocol.serialize.hessian.TestObject;
-
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectOutputStream;
 
@@ -21,9 +18,12 @@ public class SerializerTest {
             HessianSerializer serializer = new HessianSerializer();
             serializer.serialize(testObject,hessianBaos);
 
+            JdkSerializer jdkSerializer = new JdkSerializer();
+            jdkSerializer.serialize(testObject,objectBaos);
 
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(objectBaos);
-            objectOutputStream.writeObject(testObject);
+            System.out.println(hessianBaos);
+
+            System.out.println(objectBaos);
         } catch (Exception e) {
             e.printStackTrace();
         }

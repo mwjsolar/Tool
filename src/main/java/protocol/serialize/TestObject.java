@@ -1,4 +1,4 @@
-package protocol.serialize.hessian;
+package protocol.serialize;
 
 import java.io.Serializable;
 
@@ -7,6 +7,8 @@ import java.io.Serializable;
  */
 public class TestObject implements Serializable {
     private Integer testA = 1;
+
+    private int testB = 2;
 
     public int getTestA() {
         return testA;

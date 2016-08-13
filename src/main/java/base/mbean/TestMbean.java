@@ -5,8 +5,6 @@ import javax.management.ObjectName;
 import java.lang.management.ManagementFactory;
 
 /**
- * see  https://blogs.oracle.com/jmxetc/entry/javax_management_standardmbean_when_and
- *
  * Created by mwjsolar on 16/5/27.
  */
 public class TestMbean implements TestMbeanMBean {

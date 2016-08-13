@@ -1,8 +1,7 @@
-package protocol.serialize.hessian;
+package protocol.serialize;
 
 import com.caucho.hessian.io.Hessian2Output;
 import com.caucho.hessian.io.HessianFactory;
-import protocol.serialize.Serializer;
 
 import java.io.IOException;
 import java.io.OutputStream;
