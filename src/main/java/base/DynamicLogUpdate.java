@@ -15,20 +15,24 @@ public class DynamicLogUpdate {
 
         logger.debug("test debug before");
 
-        String loggerName = Logger.ROOT_LOGGER_NAME;
+        String loggerName = DynamicLogUpdate.class.getName();
         String level = "debug";
         LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
-        Logger logger = loggerContext.getLogger(loggerName);
-        if (logger == null)
+        Logger changeLogger = loggerContext.getLogger(Logger.ROOT_LOGGER_NAME);
+        if (changeLogger == null)
             return;
 
-        logger.setLevel(matchLevel(level));
+        changeLogger.setLevel(matchLevel(level));
 
 
         //TEST LOG
         logger.info("test info");
 
-        logger.debug("test debug after");
+        logger.debug("test debug after log");
+
+        loggerContext.reset();
+        logger.debug("test debug after reset");
+
     }
 
     private static Level  matchLevel(String levelName) {
