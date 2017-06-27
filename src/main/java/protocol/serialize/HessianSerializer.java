@@ -1,9 +1,12 @@
 package protocol.serialize;
 
+import com.caucho.hessian.io.Hessian2Input;
 import com.caucho.hessian.io.Hessian2Output;
 import com.caucho.hessian.io.HessianFactory;
+import com.caucho.hessian.io.HessianInput;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
@@ -24,5 +27,18 @@ public class HessianSerializer implements Serializer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public Object desrialSize(InputStream inputStream) {
+        try {
+            Hessian2Input hessian2Input = _hessianFactory.createHessian2Input(inputStream);
+            Object result = hessian2Input.readObject();
+            System.out.println(result);
+            return result;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

@@ -1,6 +1,7 @@
 package protocol.serialize;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 
@@ -17,5 +18,10 @@ public class JdkSerializer implements Serializer {
             e.printStackTrace();
         }
 
+    }
+
+    @Override
+    public Object desrialSize(InputStream inputStream) {
+        return null;
     }
 }

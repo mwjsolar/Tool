@@ -8,8 +8,8 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
  */
 public class DataSourceInstance {
 
-    private static String userName = "la";
-    private static String password = "I3C";
+    private static String userName = "2222";
+    private static String password = "2222";
     private static String jdbcUrl = "jdbc:mysql://127.0.0.1:10034/loan-app-dev";
     private static String driverClass = "com.mysql.jdbc.Driver";
     private static int maxSize = 20;

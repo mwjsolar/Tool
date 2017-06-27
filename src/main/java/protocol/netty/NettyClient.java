@@ -15,6 +15,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 public class NettyClient {
     EventLoopGroup group = new NioEventLoopGroup();
 
+
     public void connect(String host,int port) {
         Bootstrap b = new Bootstrap();
         b.group(group)

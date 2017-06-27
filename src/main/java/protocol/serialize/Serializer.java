@@ -1,5 +1,6 @@
 package protocol.serialize;
 
+import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
@@ -7,4 +8,6 @@ import java.io.OutputStream;
  */
 public interface Serializer {
     void serialize(Object seriableObject,OutputStream out);
+
+    Object desrialSize(InputStream inputStream);
 }

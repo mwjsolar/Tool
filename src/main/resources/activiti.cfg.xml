@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="processEngineConfiguration"
+          class="org.activiti.engine.impl.cfg.StandaloneInMemProcessEngineConfiguration">
+        <property name="databaseType" value="mysql"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/test?allowMultiQueries=true" />
+        <property name="jdbcDriver" value="com.mysql.jdbc.Driver" />
+        <property name="jdbcUsername" value="root" />
+        <property name="jdbcPassword" value="mwj" />
+
+        <!-- Database configurations -->
+        <property name="databaseSchemaUpdate" value="true"/>
+        <property name="jobExecutorActivate" value="false"/>
+
+        <!-- 统一的事务管理 -->
+        <property name="activityFontName" value="宋体"/>
+        <property name="labelFontName" value="宋体"/>
+
+        <!--Async executor activation-->
+        <property name="asyncExecutorEnabled" value="true" />
+        <property name="asyncExecutorActivate" value="true" />
+    </bean>
+</beans>

@@ -17,9 +17,6 @@ public class TestAnotation {
     }
 
     public static void main(String[] args) {
-        InnerClass innerClass = new InnerClass();
-        Annotation[] baseDetailAnnotation = AnnotationUtils.getAnnotations(Service.class);
-        System.out.println(baseDetailAnnotation[0].getClass());
-        System.out.println(innerClass.getClass().isAnnotationPresent(Base.class));
+
     }
 }

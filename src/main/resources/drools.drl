@@ -1,0 +1,15 @@
+package rules.drools;
+
+
+import rules.drools.*
+
+global DroolsResult dr;
+
+rule "PointTable1"
+no-loop true
+when
+    $m:DroolsObject(1 == 1)
+then
+    dr.setResult("1");
+	System.out.println("test");
+end

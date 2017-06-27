@@ -1,20 +1,20 @@
 package zk;
 
-import org.apache.zookeeper.*;
+import org.apache.zookeeper.KeeperException;
+import org.apache.zookeeper.WatchedEvent;
+import org.apache.zookeeper.Watcher;
+import org.apache.zookeeper.ZooKeeper;
 import zk.lock.Lock;
 import zk.lock.ZkLock;
 import zk.watcher.ServerListWatch;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
 /**
  * Created by hzmawenjun on 2015/12/30.
  */
 public class TestZk {
-    public static String address = "10.165.124.84:2181";
+    public static String address = "127.0.0.1:8000";
 
     public static void main(String[] args) {
         final CountDownLatch countDownLatch = new CountDownLatch(1);
